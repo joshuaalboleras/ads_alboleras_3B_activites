@@ -54,7 +54,11 @@ Route::get('/course/create',function (){
     return 'Course Created';
 });
 
+
 Route::get('/course/{id}/students', function ($id) {
     $course = Courses::find($id);
-    return $course->students();
+    
+    echo "<pre>";
+        print_r($course);
+    echo "</pre>";
 });
